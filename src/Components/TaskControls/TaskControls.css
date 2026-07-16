@@ -1,0 +1,12 @@
+.TaskControls {
+    display: flex;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+    justify-content: flex-end;
+}
+
+.TaskControls div {
+    display: flex;
+    gap: 5px;
+}

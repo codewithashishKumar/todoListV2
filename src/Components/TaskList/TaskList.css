@@ -1,0 +1,87 @@
+.taskListSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.taskList>li {
+    border: 1px solid #000;
+    list-style-type: none;
+    padding: 10px;
+
+}
+
+.Tasktems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Tasktems p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.TasktemsPriority {
+    background-color: #6f43c1;
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TasktemsBTN {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.editBTN,
+.deleteBTN {
+    cursor: pointer;
+    padding: 2px 5px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.editBTN {
+    background-color: orange;
+}
+
+.deleteBTN {
+    background-color: red;
+}
+
+.EditTaskForm {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkIcon {
+    background-color: green;
+    border: 1px solid #000;
+    border-radius: 3px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

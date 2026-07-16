@@ -1,0 +1,51 @@
+.TaskFormContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.containerInputs {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.InputDIV {
+    display: flex;
+    width: 100%;
+}
+
+
+.InputDIV input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #000;
+}
+
+.minDIV {
+    width: 80px;
+}
+
+.minDIV input {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #000;
+}
+
+.plusIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.plusIcon svg {
+    display: flex;
+    background-color: rgb(85, 68, 169);
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
