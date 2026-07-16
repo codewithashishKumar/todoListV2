@@ -1,15 +1,16 @@
 import './App.css';
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import Header from './Components/Header/header';
 import TaskForm from './Components/TaskForm/TaskForm';
 import TaskControls from './Components/TaskControls/TaskControls'
 import TaskList from './Components/TaskList/TaskList'
 import { getStoredTasks, updateLocalStorage } from './utils/localStorageUtils'
+import { taskReducer } from './reducers/taskReducer';
 
 
 const App = () => {
 
-  const [task, setTask] = useState(getStoredTasks());
+  const [task, dispatch] = useReducer(taskReducer, getStoredTasks());
 
   // const newTask = [
   //   ...task,
@@ -24,42 +25,25 @@ const App = () => {
   const [showIncomplete, setShowIncomplete] = useState(false);
 
   const addTask = (newTask) => {
-    const updatedTask = [...task, newTask];
-    setTask(updatedTask);
-    updateLocalStorage(updatedTask);
+    dispatch({ type: "ADD", payload: newTask })
   }
 
   const sortTasks = () => {
-    const sortedTasks = [...task].sort((a, b) => a.priority - b.priority);
-    setTask(sortedTasks);
-    updateLocalStorage(sortedTasks);
+    dispatch({ type: "SORT" })
   }
 
   const toggleTask = (id) => {
-    const updatedTaskHandle = task.map((task) =>
-      task.id === id ? { ...task, done: !task.done } : task
-    );
-    setTask(updatedTaskHandle);
-    updateLocalStorage(updatedTaskHandle);
+    dispatch({ type: "TOGGLE", payload: id })
   };
 
 
   const handleDelete = (id) => {
     // 
-    const allTasks = task.filter((task) =>
-      task.id !== id
-    )
-    setTask(allTasks);
-    updateLocalStorage(allTasks);
+    dispatch({ type: "REMOVE", payload: id })
   }
 
   const updateTaskCode = ({ taskID, editText, editPriority }) => {
-    const updatedTasks = task.map((task) =>
-      task.id === taskID ? { ...task, text: editText, priority: editPriority } : task
-    )
-    // 
-    setTask(updatedTasks);
-    updateLocalStorage(updatedTasks);
+    dispatch({ type: "UPDATE", payload: { taskID, editText, editPriority } })
   }
 
   return (
