@@ -1,6 +1,5 @@
 .TaskFormContainer {
     display: flex;
-    flex-direction: column;
     gap: 10px;
     width: 90%;
     margin: auto;
@@ -32,6 +31,7 @@
     width: 100%;
     padding: 5px 10px;
     border: 1px solid #000;
+    height: 100%;
 }
 
 .plusIcon {
@@ -39,6 +39,7 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
+    cursor: pointer;
 }
 
 .plusIcon svg {

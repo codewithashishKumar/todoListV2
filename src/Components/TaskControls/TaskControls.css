@@ -10,3 +10,7 @@
     display: flex;
     gap: 5px;
 }
+
+.TaskControls div svg {
+    cursor: pointer;
+}

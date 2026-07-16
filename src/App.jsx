@@ -4,7 +4,7 @@ import Header from './Components/Header/header';
 import TaskForm from './Components/TaskForm/TaskForm';
 import TaskControls from './Components/TaskControls/TaskControls'
 import TaskList from './Components/TaskList/TaskList'
-import { getStoredTasks, updateLocalStorage } from './utils/localStorageUtils'
+import { getStoredTasks } from './utils/localStorageUtils'
 import { taskReducer } from './reducers/taskReducer';
 
 
